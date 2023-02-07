@@ -1,8 +1,11 @@
-var items=document.getElementsByClassName('list-group-item');
-items[2].style.backgroundColor='green';
-for(var i=0;i<items.length;i++){
-    items[i].style.fontWeight='bold';
-}
+var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundColor='green';
+var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.display='none';
 
-var line=document.getElementsByTagName('li');
-line[4].style.backgroundColor='blue';
+var secondItem1=document.querySelectorAll('list-group-item');
+secondItem1[1].style.color='green';
+var odd=document.querySelectorAll('list-group-item:nth-child(odd)');
+for (var i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor='green';
+}
