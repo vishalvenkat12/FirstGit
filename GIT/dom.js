@@ -1,11 +1,18 @@
-var secondItem=document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor='green';
-var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.display='none';
+var newItem=document.querySelector('#items');
+newItem.parentElement.style.backgroundColor='grey';
+newItem.lastElementChild.style.color='blue';
+newItem.firstElementChild.style.color='yellow';
+console.log(newItem.nextElementSibling);
 
-var secondItem1=document.querySelectorAll('list-group-item');
-secondItem1[1].style.color='green';
-var odd=document.querySelectorAll('list-group-item:nth-child(odd)');
-for (var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor='green';
-}
+
+
+var newDiv=document.createElement('div');
+newDiv.className='hello';
+newDiv.id='hello1';
+newDiv.setAttribute('title', 'Hello Div');
+var newDivText=document.createTextNode('Hello World');
+newDiv.appendChild(newDivText);
+var container=document.querySelector('header.container');
+var h1=document.querySelector('header h1');
+container.insertBefore (newDiv,h1);
+
