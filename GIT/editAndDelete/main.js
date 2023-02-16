@@ -1,12 +1,6 @@
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
 
-for (var i=0;i<itemList.clientHeight;i++){
-  var editBtn= document.createElement('button');
-  editBtn.className='btn btn-sm float-right editBtn';
-  editBtn.appendChild(document.createTextNode('Edit'));
-  itemList[i].appendChild(editBtn);
-} 
 
 var filter = document.getElementById('filter');
 
@@ -73,3 +67,10 @@ function filterItems(e){
     }
   });
 }
+
+for (var i=0;i<itemList.clientHeight;i++){
+  var editBtn= document.createElement('button');
+  editBtn.className='btn btn-sm float-right editBtn';
+  editBtn.appendChild(document.createTextNode('Edit'));
+  itemList[i].appendChild(editBtn);
+} 
